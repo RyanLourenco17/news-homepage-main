@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #fffdfa;
+    min-height: 110vh;
+}
+
+body .center{
+    margin: 4% 10%;
+}
+
+.center header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center header .logo{
+    color: #00001a;
+}
+
+header .menu-icon{
+    display: none;
+}
+
+.navbar ul{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul .menu-icon-close{
+    display: none;
+    transition: 1s ease-in;
+}
+
+.navbar ul li a, p{
+    color: #5d5f79;
+    font-size: 15px;
+}
+
+/* GRID */
+.center .grid {
+    margin-top: 3rem;
+    display: grid;
+    gap: 4rem 2rem;
+    grid-template-areas: 
+    "main-news main-news side-news" 
+    "main-news main-news side-news"
+    "bottom-news bottom-news bottom-news";
+}
+
+
+/* Main-News */
+.grid .main-news{
+    height: 30rem;
+    grid-area: main-news;
+}
+
+.grid .main-news img{
+    width: 100%;
+    height: 60%;
+}
+
+.main-news .about-news{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.about-news h1{
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.description p{
+    line-height: 1.5rem;
+}
+
+.about-news .description button{
+    margin-top: 3rem;
+    background-color: #00001a;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.description button:hover{
+    background-color: #f15e50;
+    cursor: pointer;
+}
+
+.description button a{
+    color: #fffdfa;
+}
+
+/* Side-News */
+.grid .side-news{
+    /* height: 30rem; */
+    grid-area: side-news;
+    background-color: #00001a;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2.2rem 2rem;
+}
+
+.side-news h2{
+    color: #e9ab53;
+    font-size: 35px;
+}
+
+.side-news article:nth-child(3), .side-news article:nth-child(2){
+    border-bottom: 1px solid #5d5f79;
+    padding-bottom: 2rem;
+}
+
+.side-news .article-title a{
+    color: #fffdfa;
+    margin-bottom: 0.5rem;
+}
+
+.article-title a:hover, .navbar a:hover{
+    color: #e9ab53;
+}
+
+/* Bottom-News */
+.grid .bottom-news{
+    grid-area: bottom-news;
+    display: flex;
+    gap: 2rem;
+}
+
+.grid .bottom-news article{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.bottom-news article img{
+    width: 9rem;
+    height: 9rem;
+}
+
+
+.bottom-news article .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.bottom-news article h2{
+    color: #c5c6ce;
+    font-size: 34px;
+}
+
+.description h3 a{
+    color: #00001a;
+}
+
+.description h3 a:hover{
+    color: #f15e50;
+}
+
+.center .attribution{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Responsivo */
+@media only screen and (min-width: 320px) and (max-width: 890px){
+    body{
+        overflow-x: hidden;
+    }
+
+    body .center{
+        margin: 4%;
+    }
+    
+    header .menu-icon{
+        display: flex;
+        cursor: pointer;
+        z-index: 0;
+        position: absolute;
+        right: 10%;
+    }
+
+    .navbar .nav-links{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0;
+        background-color: #fffdfa;
+        transition: 0.5s ease-in;
+    }
+
+    
+    .navbar.open .nav-links{
+        width: 70%;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .navbar ul .menu-icon-close{
+        display: flex;
+    }
+
+    .navbar.open ul li:nth-child(1){
+        display: flex;
+        justify-content: end;
+    }
+
+    .navbar ul li button{
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .navbar ul li a{
+        color: #00001a;
+        font-size: 20px;
+    }
+
+    
+    .center .grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid .main-news{
+        height: auto;
+    }
+
+    .main-news .about-news{
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .grid .main-news img{
+        width: 100%;
+        height: 18rem;
+    }
+
+    .grid .side-news{
+        height: auto;
+    }
+
+    .grid .bottom-news{
+        flex-direction: column;
+    }
+}
