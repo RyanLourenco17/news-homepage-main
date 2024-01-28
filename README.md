@@ -1,5 +1,8 @@
 # Frontend Mentor - News homepage solution
-This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+### Link
+- Solution URL: https://news-homepage-main-ed09y4o43-ryans-projects-45163aaa.vercel.app/
 
 ### The challenge
 Users should be able to:
